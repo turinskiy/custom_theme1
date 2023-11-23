@@ -953,6 +953,7 @@ ul {
   color: lighten($text_color, 20%);
 }
 .footer-inner {
+  border: 1px solid red;
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
