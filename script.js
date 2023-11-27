@@ -1,5 +1,6 @@
+var isAppSupport = false;
 (function () {
-  'use strict';
+  "use strict";
 
   // Key map
   const ENTER = 13;
@@ -93,7 +94,10 @@
     this.toggle.addEventListener("click", this.clickHandler.bind(this));
     this.toggle.addEventListener("keydown", this.toggleKeyHandler.bind(this));
     this.menu.addEventListener("keydown", this.menuKeyHandler.bind(this));
-    document.body.addEventListener("click", this.outsideClickHandler.bind(this));
+    document.body.addEventListener(
+      "click",
+      this.outsideClickHandler.bind(this)
+    );
 
     const toggleId = this.toggle.getAttribute("id") || crypto.randomUUID();
     const menuId = this.menu.getAttribute("id") || crypto.randomUUID();
@@ -658,4 +662,21 @@
     }
   });
 
+  // Custom
+  window.addEventListener("DOMContentLoaded", () => {
+    // const baseUrl = window.location.href;
+    const params = new URLSearchParams(window.location.search);
+    console.log("Mobile:", params.get("mobile")); // Output: "John"
+    isAppSupport = !!params.get("mobile");
+    const appSupportContainer = document.getElementById(
+      "app-support-container"
+    );
+    console.log(typeof isAppSupport);
+
+    if (isAppSupport == true && appSupportContainer) {
+      appSupportContainer.innerHTML = "This is mobile version";
+    }
+  });
 })();
+
+// console.log('isAppSupport:', isAppSupport);
