@@ -1,7 +1,7 @@
 {
   "name": "Custom Theme1",
   "author": "Serhii Turynskyi",
-  "version": "3.1.8",
+  "version": "3.1.9",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -417,10 +417,10 @@
       ]
     },
     {
-      "label": "fonts_group_label",
+      "label": "fonts_group_label1",
       "variables": [
         {
-          "identifier": "heading_font",
+          "identifier": "heading_font1",
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
