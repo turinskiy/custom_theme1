@@ -493,7 +493,7 @@
           ]
         },
         {
-          "identifier": "text_font",
+          "identifier": "text_font1",
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
